@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reading — The Study Shelf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<style>
+  .reader-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .back-link { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-soft); text-decoration: none; }
+  .back-link:hover { color: var(--ink); }
+  .pdf-frame { width: 100%; height: 82vh; border: 1px solid var(--ink); border-radius: var(--radius); background: #fff; }
+  .reader-main { max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.5rem 3rem; }
+  .fallback { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.75rem; }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-inner reader-head">
+    <div>
+      <a class="back-link" href="index.html">&larr; back to the shelf</a>
+      <h1 class="site-title" id="pdfTitle" style="margin-top:0.4rem; font-size:1.5rem;">Loading…</h1>
+    </div>
+    <a class="btn primary" id="downloadBtn" href="#" download>Download</a>
+  </div>
+</header>
+
+<main class="reader-main">
+  <iframe class="pdf-frame" id="pdfFrame" title="PDF viewer"></iframe>
+  <p class="fallback">If the PDF doesn't display above, use the Download button instead — some mobile browsers can't preview PDFs inline.</p>
+</main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get("file");
+  const title = params.get("title") || "Untitled";
+
+  document.getElementById("pdfTitle").textContent = title;
+
+  if (file) {
+    document.getElementById("pdfFrame").src = file;
+    document.getElementById("downloadBtn").href = file;
+  } else {
+    document.getElementById("pdfFrame").outerHTML = '<div class="empty">No file was specified.</div>';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Study Shelf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-inner">
+    <h1 class="site-title">The Study Shelf</h1>
+    <p class="site-tag">Course notes and reference PDFs, open for anyone to read or download.</p>
+    <div class="search-row">
+      <input type="search" id="searchInput" placeholder="search by title, subject or keyword..." aria-label="Search the catalog" />
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Filter by subject"></nav>
+
+<main>
+  <div class="count-row" id="countRow"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  Built and maintained by a student, for students. New PDF? Add it under <code>/notes</code> and list it in <code>books.json</code>.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

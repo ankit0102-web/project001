@@ -1,0 +1,35 @@
+[
+  {
+    "id": "cs101-notes-unit1",
+    "title": "Unit 1 — Introduction to Programming",
+    "author": "Your Name",
+    "subject": "Computer Science",
+    "callNumber": "CS 101.1",
+    "type": "Notes",
+    "description": "Variables, control flow and functions, with worked examples from the first three lectures.",
+    "file": "notes/cs101-unit1.pdf",
+    "dateAdded": "2026-08-14"
+  },
+  {
+    "id": "calc-integration",
+    "title": "Techniques of Integration",
+    "author": "Your Name",
+    "subject": "Mathematics",
+    "callNumber": "MATH 211.4",
+    "type": "Notes",
+    "description": "Substitution, by parts, and partial fractions, summarized from the textbook chapter and tutorial.",
+    "file": "notes/calc-integration.pdf",
+    "dateAdded": "2026-08-20"
+  },
+  {
+    "id": "physics-thermo",
+    "title": "Thermodynamics — Laws and Applications",
+    "author": "Your Name",
+    "subject": "Physics",
+    "callNumber": "PHYS 150.3",
+    "type": "Textbook Scan",
+    "description": "Scanned reference chapter on the first and second laws, with annotated margin notes.",
+    "file": "notes/physics-thermo.pdf",
+    "dateAdded": "2026-09-02"
+  }
+]
